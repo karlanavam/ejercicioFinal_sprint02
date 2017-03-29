@@ -7,6 +7,7 @@
 	<h1>Trello!</h1>
 
 	<hr>
+	<section id="contieneLista">
 	<table id="listaPendientes_uno" border="solid;.5px">
 		<span id="tituloEditable"><h3>Pendientes semana</h3></span>
 		<ul id="listaPendientes">
@@ -14,16 +15,19 @@
 	        <li>Triunfar</li>
 	           
 	    </ul>
+	</table>
+	</section>
 
 	    <h4>Agregar pendiente: </h4>	
 		<input type="text" id="pendientePorAgregar">
 		<button type="button" id="botonCrearPendiente" onclick="agregarPendientes()">Crear pendiente :(</button>
 		<button type="button" id="botonBorrarPendiente" onclick="borrarPendientes()">Borrar pendiente :)</button>
-	</table>
+
+
 
 	<hr>
-	<input type="text" id="listaPorCrear">
-	<button type="button" id="botonCrearPendiente">Crear lista!</button>
+	<input type="text" id="listaPorCrear" value="">
+	<button type="button" id="botonCrearPendiente" onclick="agregarListaPendientes ()">Crear lista!</button>
 
 	<script type="text/javascript" src="./javascript/main.js"></script>
 </body>
