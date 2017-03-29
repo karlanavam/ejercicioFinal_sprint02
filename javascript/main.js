@@ -1,9 +1,9 @@
 function agregarPendientes() {
-  var pendientes = document.getElementById("pendientePorAgregar").value;
-  var li = document.createElement("li"); 
-  
-  li.innerHTML = pendientes == ''?'(pendiete sin crear)':pendientes;
-  document.getElementById('listaPendientes').appendChild(li);
+	var pendientes = document.getElementById("pendientePorAgregar").value;
+	var lista = document.createElement("li");
+	var textoLista = document.createTextNode(pendientes);
+	lista.appendChild(textoLista);
+	document.getElementById("listaPendientes").appendChild(lista);
 }
 
 function borrarPendientes() {
@@ -13,22 +13,24 @@ function borrarPendientes() {
   listaPendientes.removeChild(elemento[i]);
 }
 
-
-function agregarListaPendientes() {
-	var listaGeneralPendientes = document.getElementById("contieneLista").value;
-	var section = document.createElement("section");
-
-	section.innerHTML = listaGeneralPendientes == ''?'(lista general pendiete sin crear)':listaGeneralPendientes;
-	document.getElementById("contieneLista").appendChild(section);
-
-
+function crearListaNueva() {
+ var crearListaSecundaria = document.getElementById("contieneLista").value; 
+ var lista = document.createElement("section"); 
+ var textoLista = document.createTextNode(listaPorCrear.value); 
+   lista.appendChild(textoLista);
+   document.getElementById("contieneLista").appendChild(lista); 
+   
 }
 
-/* 	var listaAClonar = document.getElementById("contieneLista").lastChild;
-	var clone = listaAClonar.cloneNode(true);
-	var destino = document.getElementById("contieneLista");
-	destino.appendChild(clone);
-	console.log(agregarListaPendientes());
-*/
+
+
+/*function crearLista () {
+ var crearLista = document.getElementById("crearNuevaLista").value;
+
+ var lista = document.createElement("li");
+ var textoLista = document.createTextNode(crearLista);
+   lista.appendChild(textoLista);
+   document.getElementById("contenedor").appendChild(lista);
+}*/
 
 
